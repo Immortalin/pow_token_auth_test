@@ -14,6 +14,11 @@
           <ul>
             <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
           </ul>
+          <%= if current_user(@conn) do %>
+            <%= link "Sign out", to: Routes.pow_session_path(@conn, :delete), method: :delete %>
+          <%else %>
+            <%= link "Sign out", to: Routes.pow_session_path(@conn, :new), method: :get %>
+          <%end%>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>

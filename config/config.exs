@@ -28,9 +28,6 @@ config :phoenix, :json_library, Jason
 config :test, :pow,
   user: Test.Users.User,
   repo: Test.Repo
-config :test, Test.Guardian,
-       issuer: "test",
-       secret_key: "P6M0+p/+GYsDxY5sBlK9lgcXkbYIByXTj8SEiC7fhjZRpnvrDZrQqnVE4c2SnwSV"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
